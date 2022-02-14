@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>User {{ user.id }}</h1>
+    <div class="data_container">
+        <p class="data">Full Name: {{ user.first_name }} {{ user.last_name }}</p>
+        <p class="data">Email: {{ user.email }} </p>
+        <p class="data">Created On: {{ user.created_at }}</p>
+        <p class="data">Last Updated On: {{ user.updated_at }}</p>
+    </div>
+    <div>
+        <a href="/edit/{{ user.id }}" class="btn">edit</a> | 
+        <a href="/delete/{{ user.id }}" class="btn">delete</a>
+    </div>
+    <a href="/" class="btn home_btn">Home</a>
+</body>
+</html>

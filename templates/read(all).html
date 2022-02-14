@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>All Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Created At</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in all_users %}
+                <tr>
+                    <td>{{ user.id }} </td>
+                    <td>{{ user.first_name }} {{ user.last_name }} </td>
+                    <td>{{ user.email }} </td>
+                    <td>{{ user.created_at }} </td>
+                    <td>
+                        <a href="/user/{{ user.id }}" class="btn">Show</a>
+                        <a href="/edit/{{ user.id }}" class="btn">Edit</a>
+                        <a href="/delete/{{ user.id }}" class="btn">Delete</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/create" class="btn">Add a New User</a>
+</body>
+</html>

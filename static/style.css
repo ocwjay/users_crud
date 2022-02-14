@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: darkslategrey;
+    margin-top: 20px;
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+thead {
+    border-bottom: solid 2px black;
+    background-color: rgb(182, 182, 182);
+}
+
+tr:nth-child(even) {
+    background-color: rgb(236, 236, 236);
+}
+
+th, td {
+    padding: 20px;
+}
+
+.btn {
+    background-color: rgb(42, 116, 255);
+    padding: 10px;
+    border-radius: .5em;
+    text-decoration: none;
+    color: white;
+    align-self: flex-start;
+    margin: 20px 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin: 20px;
+}
+
+input {
+    height: 20px;
+    border-radius: .5em;
+    border: solid 2px darkgrey;
+    padding: 5px;
+}
+
+.home_btn {
+    align-self: center;
+}
+
+.submit_btn {
+    border: none;
+    align-self: center;
+    width: 50%;
+    cursor: pointer;
+    height: 40px;
+}
+
+label {
+    margin: 10px 0;
+}
+
+.data {
+    margin: 10px 0;
+}
+
+.data_container {
+    margin-bottom: 20px;
+}
